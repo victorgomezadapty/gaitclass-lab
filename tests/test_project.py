@@ -120,16 +120,24 @@ def test_no_forbidden_names():
 
 def test_status_and_attribution(summary):
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    kaggle_dataset = "https://www.kaggle.com/datasets/vctorandrsgmezlpez/inertial-gait-kinematics-in-oa-and-stenosis"
+    kaggle_notebook = "https://www.kaggle.com/code/vctorandrsgmezlpez/gaitclass-lab-inertial-gait-re-analysis"
     assert "status: public" in readme.lower()
     assert "https://github.com/victorgomezadapty/gaitclass-lab" in readme
-    assert "kaggle.com" not in readme.lower()
-    assert "kaggle links will be added when they are live" in readme.lower()
+    assert kaggle_dataset in readme
+    assert kaggle_notebook in readme
+    assert "will be added when they are live" not in readme.lower()
+    assert {u.rstrip(".,);") for u in re.findall(r"https://www\.kaggle\.com/\S+", readme)} == {kaggle_dataset, kaggle_notebook}
     results = (ROOT / "RESULTS.md").read_text(encoding="utf-8")
     assert "status: public" in results.lower()
     assert "https://github.com/victorgomezadapty/gaitclass-lab" in results
     provenance = (ROOT / "PROVENANCE.md").read_text(encoding="utf-8")
     assert "status: public" in provenance.lower()
     assert "https://github.com/victorgomezadapty/gaitclass-lab" in provenance
+    assert kaggle_dataset in provenance
+    assert kaggle_notebook in provenance
+    assert "will be added when they are live" not in provenance.lower()
+    assert {u.rstrip(".,);") for u in re.findall(r"https://www\.kaggle\.com/\S+", provenance)} == {kaggle_dataset, kaggle_notebook}
     assert summary["status"] == "public"
     figure_source = (ROOT / "src" / "gaitclass_lab" / "figures.py").read_text(encoding="utf-8")
     assert "Public re-analysis." in figure_source

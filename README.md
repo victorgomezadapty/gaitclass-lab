@@ -5,7 +5,10 @@ hip or knee osteoarthritis (OA), lumbar or cervical spinal stenosis, and healthy
 measured with inertial sensors.
 
 **Status: public.** The analysis repository is public at
-https://github.com/victorgomezadapty/gaitclass-lab. Kaggle links will be added when they are live.
+https://github.com/victorgomezadapty/gaitclass-lab.
+The same public re-analysis is on Kaggle.
+Dataset: https://www.kaggle.com/datasets/vctorandrsgmezlpez/inertial-gait-kinematics-in-oa-and-stenosis
+Notebook: https://www.kaggle.com/code/vctorandrsgmezlpez/gaitclass-lab-inertial-gait-re-analysis
 
 ## About the name
 
