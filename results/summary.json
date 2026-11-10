@@ -1,0 +1,904 @@
+{
+  "status": "public",
+  "generated_local_time": "2026-11-10T17:58:15+00:00",
+  "python": "3.13.5",
+  "source": {
+    "title": "Discrete ankle, knee and hip kinematic parameters for overground walking assessed using inertial sensors in patients with various orthopaedic conditions",
+    "short_name": "GaitClass (file and project short name only)",
+    "zenodo_record": "https://zenodo.org/records/7598463",
+    "doi": "10.5281/zenodo.7598463",
+    "concept_doi": "10.5281/zenodo.7598462",
+    "license_id": "cc-by-4.0",
+    "file": "data set GaitClass.xlsx",
+    "bytes": 88971,
+    "md5": "806f2df6840f5e65d9a9162226ae7547",
+    "paper_doi": "10.1002/jor.25797",
+    "paper_pmid": "38341759",
+    "paper_license": "CC BY-NC-ND 4.0",
+    "ethics": "EKNZ 2022-01511",
+    "citation": "Nüesch, C., Dammeyer, C., Ismailidis, P., Netzer, C., Egloff, C., Mandelli, F., Stoffel, K., & Mündermann, A. (2023). Discrete ankle, knee and hip kinematic parameters for overground walking assessed using inertial sensors in patients with various orthopaedic conditions [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.7598463. License CC BY 4.0."
+  },
+  "n_participants": 206,
+  "n_columns": 28,
+  "group_counts_by_code": {
+    "0": 96,
+    "1": 20,
+    "2": 30,
+    "3": 43,
+    "4": 17
+  },
+  "group_mapping": {
+    "mapping": {
+      "0": "healthy control",
+      "1": "hip OA",
+      "2": "knee OA",
+      "3": "lumbar stenosis",
+      "4": "cervical stenosis"
+    },
+    "basis": "INFERRED from group sizes reported on Zenodo and in the paper; the codebook lists code 1 twice and never code 0",
+    "codebook_text": "Participant group [1 = healthy; 1 = hip osteoarthritis; 2 = knee osteoarthritis; 3 = lumbar spinal stenosis; 4 = cervical spinal stenosis]"
+  },
+  "missing_cells_in_file": 0,
+  "direct_identifier_columns": [],
+  "audit": {
+    "flagged_columns": [
+      "Group",
+      "Speed",
+      "StancePct",
+      "StanceDifference",
+      "KneeMinimum",
+      "HipMinimum",
+      "AnkleICDifference",
+      "AnklePlantarflexion1Difference",
+      "AnkleDorsalflexionDifference",
+      "AnklePlantarflexion2Difference",
+      "KneeMinimumDifference"
+    ],
+    "n_flagged_columns": 11,
+    "codebook_name_mismatches": 4,
+    "headers_with_whitespace": 11,
+    "stance_range": [
+      55.83,
+      71.77
+    ],
+    "knee_minimum_range": [
+      -0.68,
+      -0.13
+    ],
+    "knee_maximum_range": [
+      3.11,
+      34.15
+    ],
+    "hip_minimum_max_value": -0.3,
+    "speed_range": [
+      0.48,
+      1.74
+    ]
+  },
+  "demographics": {
+    "healthy control": {
+      "n": 96,
+      "age_mean": 62.5,
+      "age_sd": 11.8,
+      "age_ci95": [
+        60.1,
+        64.9
+      ],
+      "bmi_mean": 25.0,
+      "female_pct": 40.6
+    },
+    "hip OA": {
+      "n": 20,
+      "age_mean": 61.4,
+      "age_sd": 11.6,
+      "age_ci95": [
+        56.0,
+        66.8
+      ],
+      "bmi_mean": 28.3,
+      "female_pct": 55.0
+    },
+    "knee OA": {
+      "n": 30,
+      "age_mean": 69.1,
+      "age_sd": 10.4,
+      "age_ci95": [
+        65.2,
+        73.0
+      ],
+      "bmi_mean": 28.1,
+      "female_pct": 53.3
+    },
+    "lumbar stenosis": {
+      "n": 43,
+      "age_mean": 71.0,
+      "age_sd": 7.2,
+      "age_ci95": [
+        68.8,
+        73.2
+      ],
+      "bmi_mean": 27.8,
+      "female_pct": 48.8
+    },
+    "cervical stenosis": {
+      "n": 17,
+      "age_mean": 61.4,
+      "age_sd": 11.0,
+      "age_ci95": [
+        55.8,
+        67.1
+      ],
+      "bmi_mean": 26.6,
+      "female_pct": 47.1
+    }
+  },
+  "demographic_tests": {
+    "age_kruskal_h": 27.150095,
+    "age_kruskal_p": 1.9e-05,
+    "bmi_kruskal_h": 25.873507,
+    "bmi_kruskal_p": 3.4e-05,
+    "sex_chi2": 2.563157,
+    "sex_chi2_p": 0.633363,
+    "age_patients_minus_controls": 4.775379,
+    "age_controls_vs_patients_mannwhitney_p": 0.001785
+  },
+  "contrasts": {
+    "features_prespecified": [
+      "Speed",
+      "StancePct",
+      "KneeIC",
+      "KneeMaximum",
+      "HipMinimum",
+      "HipMaximumStance",
+      "AnkleDorsalflexion",
+      "AnklePlantarflexion2"
+    ],
+    "n_contrasts_per_model": 32,
+    "significant_holm_unadjusted": 19,
+    "significant_holm_age_sex_adjusted": 18,
+    "significant_holm_age_sex_bmi_adjusted": 15,
+    "significant_holm_adjusted_flagged_removed": 15,
+    "lost_after_age_sex_adjustment": [
+      "AnkleDorsalflexion|lumbar stenosis"
+    ],
+    "gained_after_age_sex_adjustment": [],
+    "lost_after_removing_flagged_rows": [
+      "KneeIC|cervical stenosis",
+      "StancePct|cervical stenosis",
+      "StancePct|knee OA"
+    ],
+    "rows_after_removing_flagged": 168,
+    "adjusted": {
+      "Speed|hip OA": {
+        "diff": -0.102,
+        "ci95": [
+          -0.185,
+          -0.02
+        ],
+        "std_diff": -0.47,
+        "p_holm": 0.1882
+      },
+      "Speed|knee OA": {
+        "diff": -0.234,
+        "ci95": [
+          -0.319,
+          -0.149
+        ],
+        "std_diff": -1.074,
+        "p_holm": 0.0
+      },
+      "Speed|lumbar stenosis": {
+        "diff": -0.167,
+        "ci95": [
+          -0.261,
+          -0.073
+        ],
+        "std_diff": -0.766,
+        "p_holm": 0.009
+      },
+      "Speed|cervical stenosis": {
+        "diff": -0.053,
+        "ci95": [
+          -0.159,
+          0.052
+        ],
+        "std_diff": -0.244,
+        "p_holm": 1.0
+      },
+      "StancePct|hip OA": {
+        "diff": -0.035,
+        "ci95": [
+          -1.444,
+          1.375
+        ],
+        "std_diff": -0.017,
+        "p_holm": 1.0
+      },
+      "StancePct|knee OA": {
+        "diff": 1.469,
+        "ci95": [
+          0.581,
+          2.358
+        ],
+        "std_diff": 0.73,
+        "p_holm": 0.0202
+      },
+      "StancePct|lumbar stenosis": {
+        "diff": 0.582,
+        "ci95": [
+          -0.602,
+          1.765
+        ],
+        "std_diff": 0.289,
+        "p_holm": 1.0
+      },
+      "StancePct|cervical stenosis": {
+        "diff": 1.626,
+        "ci95": [
+          0.602,
+          2.651
+        ],
+        "std_diff": 0.808,
+        "p_holm": 0.0297
+      },
+      "KneeIC|hip OA": {
+        "diff": -0.509,
+        "ci95": [
+          -1.796,
+          0.779
+        ],
+        "std_diff": -0.167,
+        "p_holm": 1.0
+      },
+      "KneeIC|knee OA": {
+        "diff": -3.02,
+        "ci95": [
+          -3.956,
+          -2.084
+        ],
+        "std_diff": -0.994,
+        "p_holm": 0.0
+      },
+      "KneeIC|lumbar stenosis": {
+        "diff": -2.346,
+        "ci95": [
+          -3.223,
+          -1.469
+        ],
+        "std_diff": -0.772,
+        "p_holm": 0.0
+      },
+      "KneeIC|cervical stenosis": {
+        "diff": -1.82,
+        "ci95": [
+          -2.982,
+          -0.658
+        ],
+        "std_diff": -0.599,
+        "p_holm": 0.0322
+      },
+      "KneeMaximum|hip OA": {
+        "diff": -1.365,
+        "ci95": [
+          -4.226,
+          1.495
+        ],
+        "std_diff": -0.324,
+        "p_holm": 1.0
+      },
+      "KneeMaximum|knee OA": {
+        "diff": -7.823,
+        "ci95": [
+          -9.987,
+          -5.659
+        ],
+        "std_diff": -1.854,
+        "p_holm": 0.0
+      },
+      "KneeMaximum|lumbar stenosis": {
+        "diff": -4.669,
+        "ci95": [
+          -6.823,
+          -2.514
+        ],
+        "std_diff": -1.106,
+        "p_holm": 0.0005
+      },
+      "KneeMaximum|cervical stenosis": {
+        "diff": -0.035,
+        "ci95": [
+          -1.85,
+          1.78
+        ],
+        "std_diff": -0.008,
+        "p_holm": 1.0
+      },
+      "HipMinimum|hip OA": {
+        "diff": 3.495,
+        "ci95": [
+          2.035,
+          4.954
+        ],
+        "std_diff": 1.065,
+        "p_holm": 0.0001
+      },
+      "HipMinimum|knee OA": {
+        "diff": 0.439,
+        "ci95": [
+          -1.161,
+          2.038
+        ],
+        "std_diff": 0.134,
+        "p_holm": 1.0
+      },
+      "HipMinimum|lumbar stenosis": {
+        "diff": 3.424,
+        "ci95": [
+          2.093,
+          4.756
+        ],
+        "std_diff": 1.044,
+        "p_holm": 0.0
+      },
+      "HipMinimum|cervical stenosis": {
+        "diff": -6.832,
+        "ci95": [
+          -9.12,
+          -4.544
+        ],
+        "std_diff": -2.083,
+        "p_holm": 0.0
+      },
+      "HipMaximumStance|hip OA": {
+        "diff": -6.371,
+        "ci95": [
+          -10.013,
+          -2.729
+        ],
+        "std_diff": -1.204,
+        "p_holm": 0.0109
+      },
+      "HipMaximumStance|knee OA": {
+        "diff": -1.045,
+        "ci95": [
+          -3.294,
+          1.204
+        ],
+        "std_diff": -0.197,
+        "p_holm": 1.0
+      },
+      "HipMaximumStance|lumbar stenosis": {
+        "diff": -1.512,
+        "ci95": [
+          -3.587,
+          0.563
+        ],
+        "std_diff": -0.286,
+        "p_holm": 1.0
+      },
+      "HipMaximumStance|cervical stenosis": {
+        "diff": -8.718,
+        "ci95": [
+          -11.366,
+          -6.07
+        ],
+        "std_diff": -1.647,
+        "p_holm": 0.0
+      },
+      "AnkleDorsalflexion|hip OA": {
+        "diff": 3.777,
+        "ci95": [
+          1.993,
+          5.562
+        ],
+        "std_diff": 1.035,
+        "p_holm": 0.0007
+      },
+      "AnkleDorsalflexion|knee OA": {
+        "diff": 3.78,
+        "ci95": [
+          2.164,
+          5.395
+        ],
+        "std_diff": 1.036,
+        "p_holm": 0.0001
+      },
+      "AnkleDorsalflexion|lumbar stenosis": {
+        "diff": 2.694,
+        "ci95": [
+          0.779,
+          4.609
+        ],
+        "std_diff": 0.738,
+        "p_holm": 0.0817
+      },
+      "AnkleDorsalflexion|cervical stenosis": {
+        "diff": 0.484,
+        "ci95": [
+          -1.59,
+          2.558
+        ],
+        "std_diff": 0.133,
+        "p_holm": 1.0
+      },
+      "AnklePlantarflexion2|hip OA": {
+        "diff": 3.307,
+        "ci95": [
+          -0.579,
+          7.193
+        ],
+        "std_diff": 0.519,
+        "p_holm": 1.0
+      },
+      "AnklePlantarflexion2|knee OA": {
+        "diff": 8.338,
+        "ci95": [
+          5.056,
+          11.619
+        ],
+        "std_diff": 1.308,
+        "p_holm": 0.0
+      },
+      "AnklePlantarflexion2|lumbar stenosis": {
+        "diff": 5.552,
+        "ci95": [
+          2.535,
+          8.569
+        ],
+        "std_diff": 0.871,
+        "p_holm": 0.0062
+      },
+      "AnklePlantarflexion2|cervical stenosis": {
+        "diff": 3.958,
+        "ci95": [
+          0.371,
+          7.546
+        ],
+        "std_diff": 0.621,
+        "p_holm": 0.3669
+      }
+    },
+    "unadjusted": {
+      "Speed|hip OA": {
+        "diff": -0.102,
+        "ci95": [
+          -0.183,
+          -0.021
+        ],
+        "std_diff": -0.467,
+        "p_holm": 0.1738
+      },
+      "Speed|knee OA": {
+        "diff": -0.262,
+        "ci95": [
+          -0.346,
+          -0.178
+        ],
+        "std_diff": -1.202,
+        "p_holm": 0.0
+      },
+      "Speed|lumbar stenosis": {
+        "diff": -0.201,
+        "ci95": [
+          -0.291,
+          -0.11
+        ],
+        "std_diff": -0.92,
+        "p_holm": 0.0003
+      },
+      "Speed|cervical stenosis": {
+        "diff": -0.051,
+        "ci95": [
+          -0.156,
+          0.054
+        ],
+        "std_diff": -0.233,
+        "p_holm": 1.0
+      },
+      "StancePct|hip OA": {
+        "diff": -0.067,
+        "ci95": [
+          -1.483,
+          1.35
+        ],
+        "std_diff": -0.033,
+        "p_holm": 1.0
+      },
+      "StancePct|knee OA": {
+        "diff": 1.435,
+        "ci95": [
+          0.581,
+          2.288
+        ],
+        "std_diff": 0.713,
+        "p_holm": 0.0158
+      },
+      "StancePct|lumbar stenosis": {
+        "diff": 0.556,
+        "ci95": [
+          -0.585,
+          1.697
+        ],
+        "std_diff": 0.276,
+        "p_holm": 1.0
+      },
+      "StancePct|cervical stenosis": {
+        "diff": 1.612,
+        "ci95": [
+          0.613,
+          2.612
+        ],
+        "std_diff": 0.801,
+        "p_holm": 0.0235
+      },
+      "KneeIC|hip OA": {
+        "diff": -0.381,
+        "ci95": [
+          -1.727,
+          0.964
+        ],
+        "std_diff": -0.126,
+        "p_holm": 1.0
+      },
+      "KneeIC|knee OA": {
+        "diff": -3.07,
+        "ci95": [
+          -3.958,
+          -2.182
+        ],
+        "std_diff": -1.01,
+        "p_holm": 0.0
+      },
+      "KneeIC|lumbar stenosis": {
+        "diff": -2.468,
+        "ci95": [
+          -3.284,
+          -1.652
+        ],
+        "std_diff": -0.812,
+        "p_holm": 0.0
+      },
+      "KneeIC|cervical stenosis": {
+        "diff": -1.75,
+        "ci95": [
+          -2.895,
+          -0.606
+        ],
+        "std_diff": -0.576,
+        "p_holm": 0.038
+      },
+      "KneeMaximum|hip OA": {
+        "diff": -1.145,
+        "ci95": [
+          -3.992,
+          1.702
+        ],
+        "std_diff": -0.271,
+        "p_holm": 1.0
+      },
+      "KneeMaximum|knee OA": {
+        "diff": -8.242,
+        "ci95": [
+          -10.465,
+          -6.019
+        ],
+        "std_diff": -1.953,
+        "p_holm": 0.0
+      },
+      "KneeMaximum|lumbar stenosis": {
+        "diff": -5.279,
+        "ci95": [
+          -7.363,
+          -3.194
+        ],
+        "std_diff": -1.251,
+        "p_holm": 0.0
+      },
+      "KneeMaximum|cervical stenosis": {
+        "diff": 0.111,
+        "ci95": [
+          -1.63,
+          1.851
+        ],
+        "std_diff": 0.026,
+        "p_holm": 1.0
+      },
+      "HipMinimum|hip OA": {
+        "diff": 3.541,
+        "ci95": [
+          2.086,
+          4.995
+        ],
+        "std_diff": 1.079,
+        "p_holm": 0.0
+      },
+      "HipMinimum|knee OA": {
+        "diff": 0.529,
+        "ci95": [
+          -1.018,
+          2.076
+        ],
+        "std_diff": 0.161,
+        "p_holm": 1.0
+      },
+      "HipMinimum|lumbar stenosis": {
+        "diff": 3.51,
+        "ci95": [
+          2.252,
+          4.768
+        ],
+        "std_diff": 1.07,
+        "p_holm": 0.0
+      },
+      "HipMinimum|cervical stenosis": {
+        "diff": -6.815,
+        "ci95": [
+          -9.099,
+          -4.531
+        ],
+        "std_diff": -2.077,
+        "p_holm": 0.0
+      },
+      "HipMaximumStance|hip OA": {
+        "diff": -6.59,
+        "ci95": [
+          -10.091,
+          -3.09
+        ],
+        "std_diff": -1.245,
+        "p_holm": 0.004
+      },
+      "HipMaximumStance|knee OA": {
+        "diff": -1.701,
+        "ci95": [
+          -4.023,
+          0.62
+        ],
+        "std_diff": -0.321,
+        "p_holm": 1.0
+      },
+      "HipMaximumStance|lumbar stenosis": {
+        "diff": -2.191,
+        "ci95": [
+          -4.131,
+          -0.251
+        ],
+        "std_diff": -0.414,
+        "p_holm": 0.3224
+      },
+      "HipMaximumStance|cervical stenosis": {
+        "diff": -8.781,
+        "ci95": [
+          -11.418,
+          -6.143
+        ],
+        "std_diff": -1.659,
+        "p_holm": 0.0
+      },
+      "AnkleDorsalflexion|hip OA": {
+        "diff": 3.756,
+        "ci95": [
+          1.883,
+          5.629
+        ],
+        "std_diff": 1.029,
+        "p_holm": 0.0016
+      },
+      "AnkleDorsalflexion|knee OA": {
+        "diff": 4.167,
+        "ci95": [
+          2.736,
+          5.597
+        ],
+        "std_diff": 1.142,
+        "p_holm": 0.0
+      },
+      "AnkleDorsalflexion|lumbar stenosis": {
+        "diff": 3.168,
+        "ci95": [
+          1.293,
+          5.043
+        ],
+        "std_diff": 0.868,
+        "p_holm": 0.0158
+      },
+      "AnkleDorsalflexion|cervical stenosis": {
+        "diff": 0.443,
+        "ci95": [
+          -1.656,
+          2.543
+        ],
+        "std_diff": 0.121,
+        "p_holm": 1.0
+      },
+      "AnklePlantarflexion2|hip OA": {
+        "diff": 3.239,
+        "ci95": [
+          -0.59,
+          7.067
+        ],
+        "std_diff": 0.508,
+        "p_holm": 0.9733
+      },
+      "AnklePlantarflexion2|knee OA": {
+        "diff": 9.162,
+        "ci95": [
+          5.876,
+          12.447
+        ],
+        "std_diff": 1.437,
+        "p_holm": 0.0
+      },
+      "AnklePlantarflexion2|lumbar stenosis": {
+        "diff": 6.573,
+        "ci95": [
+          3.855,
+          9.291
+        ],
+        "std_diff": 1.031,
+        "p_holm": 0.0
+      },
+      "AnklePlantarflexion2|cervical stenosis": {
+        "diff": 3.86,
+        "ci95": [
+          0.176,
+          7.543
+        ],
+        "std_diff": 0.605,
+        "p_holm": 0.4401
+      }
+    }
+  },
+  "imputation": {
+    "detectable_suspected_cells": 95,
+    "rows_flagged": 38,
+    "by_group": {
+      "healthy control": {
+        "flagged": 27,
+        "n": 96
+      },
+      "hip OA": {
+        "flagged": 3,
+        "n": 20
+      },
+      "knee OA": {
+        "flagged": 5,
+        "n": 30
+      },
+      "lumbar stenosis": {
+        "flagged": 3,
+        "n": 43
+      },
+      "cervical stenosis": {
+        "flagged": 0,
+        "n": 17
+      }
+    },
+    "fisher_controls_vs_patients": {
+      "controls_flagged": 27,
+      "controls_total": 96,
+      "patients_flagged": 11,
+      "patients_total": 110,
+      "odds_ratio_control_vs_patient": 3.5217,
+      "fisher_p": 0.0011
+    },
+    "largest_shared_value": {
+      "column": "AnklePlantarflexion2",
+      "n_rows": 19,
+      "groups": "15 CTRL, 4 KOA"
+    },
+    "original_missingness_recoverable": false
+  },
+  "leakage_classification": {
+    "A. demographics only (age, sex, BMI)": {
+      "rows": 206,
+      "auc_mean": 0.699,
+      "auc_p2_5_p97_5": [
+        0.688,
+        0.713
+      ],
+      "balanced_accuracy": 0.672
+    },
+    "B. imputation flag only (no gait, no demographics)": {
+      "rows": 206,
+      "auc_mean": 0.557,
+      "auc_p2_5_p97_5": [
+        0.545,
+        0.571
+      ],
+      "balanced_accuracy": 0.591
+    },
+    "C. gait features, standard CV": {
+      "rows": 206,
+      "auc_mean": 0.777,
+      "auc_p2_5_p97_5": [
+        0.742,
+        0.803
+      ],
+      "balanced_accuracy": 0.72
+    },
+    "D. gait features, cluster-aware CV": {
+      "rows": 206,
+      "auc_mean": 0.768,
+      "auc_p2_5_p97_5": [
+        0.75,
+        0.8
+      ],
+      "balanced_accuracy": 0.711
+    },
+    "E. gait features, flagged rows removed": {
+      "rows": 168,
+      "auc_mean": 0.757,
+      "auc_p2_5_p97_5": [
+        0.729,
+        0.779
+      ],
+      "balanced_accuracy": 0.7
+    },
+    "F. gait + demographics, standard CV": {
+      "rows": 206,
+      "auc_mean": 0.765,
+      "auc_p2_5_p97_5": [
+        0.737,
+        0.79
+      ],
+      "balanced_accuracy": 0.71
+    },
+    "G. gait + demographics, flagged rows removed": {
+      "rows": 168,
+      "auc_mean": 0.774,
+      "auc_p2_5_p97_5": [
+        0.746,
+        0.797
+      ],
+      "balanced_accuracy": 0.721
+    },
+    "H. 1-NN on gait features, standard CV": {
+      "rows": 206,
+      "auc_mean": 0.621,
+      "auc_p2_5_p97_5": [
+        0.598,
+        0.641
+      ],
+      "balanced_accuracy": 0.621
+    },
+    "I. 1-NN on gait features, cluster-aware CV": {
+      "rows": 206,
+      "auc_mean": 0.616,
+      "auc_p2_5_p97_5": [
+        0.592,
+        0.651
+      ],
+      "balanced_accuracy": 0.616
+    }
+  },
+  "outputs": {
+    "tables": [
+      "t01_column_inventory_and_codebook_alignment.csv",
+      "t02_data_quality_audit.csv",
+      "t03_group_codes_inferred_mapping.csv",
+      "t04_demographics_by_group.csv",
+      "t05_features_by_group.csv",
+      "t06_group_contrasts.csv",
+      "t07_age_effect_per_10_years.csv",
+      "t08_shared_values_imputation_footprints.csv",
+      "t09_imputation_flags_by_group.csv",
+      "t10_control_spread_shrinkage.csv",
+      "t11_leakage_classification_sensitivity.csv"
+    ],
+    "figures": [
+      "fig01_group_codes.png",
+      "fig01_group_codes.webp",
+      "fig02_data_quality_audit.png",
+      "fig02_data_quality_audit.webp",
+      "fig03_age_by_group.png",
+      "fig03_age_by_group.webp",
+      "fig04_adjusted_contrasts.png",
+      "fig04_adjusted_contrasts.webp",
+      "fig05_imputation_footprints.png",
+      "fig05_imputation_footprints.webp",
+      "fig06_leakage_sensitivity.png",
+      "fig06_leakage_sensitivity.webp"
+    ]
+  }
+}

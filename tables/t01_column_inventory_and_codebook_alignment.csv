@@ -1,0 +1,29 @@
+position,raw_header,raw_header_has_whitespace,codebook_name,names_match_ignoring_case_and_spaces
+1,ID,False,ID,True
+2,Group,False,Group,True
+3,Age,False,Age,True
+4,BMI,False,Body-Mass-Index,False
+5,Sex,False,Sex,True
+6,Speed,False,Speed,True
+7,Stance ,True,Stance,True
+8,StanceDIfference,False,StanceDifference,True
+9,  AnkleIC,True,AnkleIC,True
+10,  AnklePlantarflexion1,True,AnklePlantarFlexion1,True
+11,  AnkleDorsalflexion,True,AnkleDorsalFlexion,True
+12,  AnklePlantarflexion2,True,AnklePlantarFlexion2,True
+13,  KneeMinimum,True,KneeMinimum,True
+14,  KneeIC,True,KneeIC,True
+15,  KneeMaximum,True,KneeMaximum,True
+16,  KneeMinimumTO,True,KneeMinimumTO,True
+17,  HipMininimum,True,HipMinimum,False
+18,  HipMaximumStance,True,HipMaximumStance,True
+19,DIFF AnkleIC,False,AnkleICDifference,False
+20,AnklePlantarflexion1Difference,False,AnklePLantarFlexion1Difference,True
+21,AnkleDorsalflexionDifference,False,AnkleDorsalFlexionDifference,True
+22,AnklePlantarflexion2Difference,False,AnklePlantarFlexion2Difference,True
+23,KneeMinDifference,False,KneeMinimumDifference,False
+24,KneeICDifference,False,KneeICDifference,True
+25,KneeMaximumDifference,False,KneeMaximumDifference,True
+26,KneeMinimumTODifference,False,KneeMinimumTODifference,True
+27,HipMinimumDifference,False,HipMinimumDifference,True
+28,HipMaximumStanceDifference,False,HipMaximumStanceDifference,True

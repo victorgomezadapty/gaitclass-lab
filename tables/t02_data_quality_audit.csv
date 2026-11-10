@@ -1,0 +1,29 @@
+column,raw_header,codebook_unit,codebook_description,n_nonmissing,min,max,mean,flag,note
+ID,ID,,Participant number,206,1.0,206.0,103.5,,
+Group,Group,0-4,Participant group [1 = healthy; 1 = hip osteoarthritis; 2 = knee osteoarthritis; 3 = lumbar spinal stenosis; 4 = cervical spinal stenosis],206,0.0,4.0,1.3446601941747574,codebook typo,"Codebook lists code 1 twice ('1 = healthy; 1 = hip osteoarthritis') and never code 0, while the unit says 0-4. Mapping 0 = healthy control is inferred from group sizes."
+Age,Age,years,Age of the subjects at the date of the measurement,206,25.0,92.0,65.02912621359224,,
+BMI,BMI,Kg/m²,Calculated: Weight in Kg/(height in meters*height in meters),206,15.782171349288934,48.163389727175726,26.48917799501626,,
+Sex,Sex,0/1,"Sex of the participant (0 = male, 1 = female)",206,0.0,1.0,0.46116504854368934,,
+Speed,Speed,m/s,Meters,206,0.48,1.74,1.1472815533980583,description error,Description reads 'Meters' while the unit is m/s; observed values are plausible walking speeds in m/s.
+StancePct,Stance ,seconds,Duration of the Stance Phase,206,55.83,71.77,63.090448914599726,unit mismatch,"Unit given as seconds but all values lie between about 56 and 72, which fits percent of the gait cycle, not seconds. Analysed as percent of gait cycle (assumption)."
+StanceDifference,StanceDIfference,seconds,Side difference of the duration of  stance,206,-8.560000000000002,6.149999999999999,-0.4125728155339806,unit mismatch,Unit given as seconds; values follow the Stance scale and are read as percentage points (assumption).
+AnkleIC,  AnkleIC,°,Angle of the Ankle at the IC,206,-10.664530714285714,13.064529,2.4879760830038853,,
+AnklePlantarflexion1,  AnklePlantarflexion1,°,First local minimum angle of the Ankle,206,-15.449709628,-1.3400072746192262,-8.101048874827791,,
+AnkleDorsalflexion,  AnkleDorsalflexion,°,Maximum Angle of the Ankle,206,1.1941041457142858,32.642555986785716,13.083309367569111,,
+AnklePlantarflexion2,  AnklePlantarflexion2,°,Second local minimum angle of the Ankle,206,-37.675996612666665,4.693178845483869,-17.40417654083932,,
+KneeMinimum,  KneeMinimum,°,Global minimum knee angle,206,-0.6763431595772791,-0.13283913625000035,-0.44446630660365494,implausible scale,"Values between about -0.7 and -0.1 are implausible as degrees next to the other knee angles (degrees, up to about 34). Scale unknown; excluded from primary contrasts."
+KneeIC,  KneeIC,°,Knee angle at the IC (first local maximum),206,0.116230145631068,17.177916090909093,4.512416642469688,,
+KneeMaximum,  KneeMaximum,°,Maximum knee angle during stance phase,206,3.1112877369441994,34.153322947142854,19.090507609193477,,
+KneeMinimumTO,  KneeMinimumTO,°,Knee angle at the TO (local minimum),206,-0.48306840285714286,30.418739288888887,9.909644495968438,,
+HipMinimum,  HipMininimum,°,Global hip maximum,206,-23.612533470640756,-0.3007927059090909,-7.509122457573008,min/max swap in description,"Described as 'Global hip maximum' but all values are negative (extension), consistent with a minimum. Raw header is also misspelled 'HipMininimum'."
+HipMaximumStance,  HipMaximumStance,°,Hip maximal angle during stance phase,206,11.571557602682928,44.8055555,28.633746784726505,,
+AnkleICDifference,DIFF AnkleIC,°,Side difference of the ankle angle at IC,206,-8.1989375,9.280397689951762,0.032905750810123174,header mismatch,Raw header is 'DIFF AnkleIC' while the codebook names it 'AnkleICDifference'.
+AnklePlantarflexion1Difference,AnklePlantarflexion1Difference,°,Side difference of the first ankle angle maximum,206,-4.414704089565218,6.36587434923077,0.1418140049733987,min/max swap in description,"Described as side difference of the 'first ankle angle maximum', but the base feature is a local minimum."
+AnkleDorsalflexionDifference,AnkleDorsalflexionDifference,°,Side difference of ankle angle minimum,206,-16.699210146249996,9.924296041607144,0.05123213624278027,min/max swap in description,"Described as side difference of 'ankle angle minimum', but the base feature is the maximum ankle angle."
+AnklePlantarflexion2Difference,AnklePlantarflexion2Difference,°,Side difference of second ankle angle maximum,206,-31.035309066250004,20.083977297333323,0.015108816341139709,min/max swap in description,"Described as side difference of 'second ankle angle maximum', but the base feature is a local minimum."
+KneeMinimumDifference,KneeMinDifference,°,Side difference of global knee minimum angle,206,-0.44557610916666623,0.45033176721360557,0.0016719941346449406,implausible scale,Same unknown scale as KneeMinimum (values within about +/-0.45). Excluded from classifier sensitivity features.
+KneeICDifference,KneeICDifference,°,Side difference of knee angle at IC,206,-14.404367600000002,15.996424194444447,0.4907145275376146,,
+KneeMaximumDifference,KneeMaximumDifference,°,Side difference of knee maximum angle during stance phase,206,-14.597535668425309,16.300298529736565,-0.17671028556240737,,
+KneeMinimumTODifference,KneeMinimumTODifference,°,Side difference of knee minimum angle at TO,206,-12.200627865238097,23.514268938888886,0.3359464048302437,,
+HipMinimumDifference,HipMinimumDifference,°,Side difference of global hip minimum angle,206,-8.532403270000001,14.77203242922353,0.3920741127338858,,
+HipMaximumStanceDifference,HipMaximumStanceDifference,°,Side difference of hip maximum angle during stance phase,206,-26.272782441388888,15.928918571428575,-1.0583575838386217,,

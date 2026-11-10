@@ -1,0 +1,6 @@
+code,observed_n,label_used,reported_n_zenodo_and_paper,counts_match,basis
+0,96,healthy control,96,True,"inferred from reported group size (codebook lists 1 twice, no 0)"
+1,20,hip OA,20,True,"codebook code, confirmed by reported group size"
+2,30,knee OA,30,True,"codebook code, confirmed by reported group size"
+3,43,lumbar stenosis,43,True,"codebook code, confirmed by reported group size"
+4,17,cervical stenosis,17,True,"codebook code, confirmed by reported group size"
