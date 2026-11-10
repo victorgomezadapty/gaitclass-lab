@@ -39,4 +39,4 @@ The file in `data/raw/` is never edited.
    study ID numbers next to repeated values so the imputation audit can be checked. It contains no
    demographics.
 4. Attribution as in `DATA_LICENSE.md` must accompany any reuse of the data or derived results.
-5. Status: public. The analysis repository is public at https://github.com/victorgomezadapty/gaitclass-lab. Kaggle links will be added when they are live.
+5. Status: public. The analysis repository is public at https://github.com/victorgomezadapty/gaitclass-lab. The same public re-analysis is on Kaggle. Dataset: https://www.kaggle.com/datasets/vctorandrsgmezlpez/inertial-gait-kinematics-in-oa-and-stenosis. Notebook: https://www.kaggle.com/code/vctorandrsgmezlpez/gaitclass-lab-inertial-gait-re-analysis.
