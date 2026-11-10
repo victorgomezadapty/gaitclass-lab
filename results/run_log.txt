@@ -1,0 +1,2 @@
+md5 806f2df6840f5e65d9a9162226ae7547 bytes 88971 shape (206, 28)
+tables 11 figures 12
